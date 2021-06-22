@@ -4,6 +4,7 @@ import {
   dropMessagesTable,
   createMessageTable,
 } from './queries';
+import { createUsersTable } from './authQueries';
 
 export const executeQueryArray = async (arr) => new Promise((resolve) => {
   const stop = arr.length;
@@ -14,5 +15,5 @@ export const executeQueryArray = async (arr) => new Promise((resolve) => {
 });
 
 export const dropTables = () => executeQueryArray([ dropMessagesTable ]);
-export const createTables = () => executeQueryArray([ createMessageTable ]);
+export const createTables = () => executeQueryArray([ createMessageTable, createUsersTable ]);
 export const insertIntoTables = () => executeQueryArray([ insertMessages ]);

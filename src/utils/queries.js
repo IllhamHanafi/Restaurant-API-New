@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS messages (
   name VARCHAR DEFAULT '',
   message VARCHAR NOT NULL
   )
-  `;
+`;
 
 export const insertMessages = `
 INSERT INTO messages(name, message)
